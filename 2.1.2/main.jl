@@ -19,7 +19,7 @@ function diffuse!(agent_i, agent_j)
 end
 
 #as in the diffusino only simulation the network consists of the agents and a list of unidrected edges
-#in addition a edge-list representation is stored in 'knows' to cache local connections for calculating probability to innovate at transmission
+#in addition a adjacency-list representation is stored in 'knows' to cache local connections for calculating probability to innovate at transmission
 #also, size, topology and replication id were stored localy to make the multiprocessing API slightly more self-contained
 mutable struct Network
     agents :: Vector{Agent}

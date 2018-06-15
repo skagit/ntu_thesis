@@ -1,4 +1,4 @@
-# a network has agents, edges, an edge-list representation of the edges, information about size, topology, and replication id number used for recording data, a world, and a storage for cached data between intergenerational transfers
+# a network has agents, edges, an adjacency list representation of the graph, information about size, topology, and replication id number used for recording data, a world, and a storage for cached data between intergenerational transfers
 mutable struct Network
   agents :: Vector{Agent}
   ties :: Vector{Tuple{Int64, Int64}}

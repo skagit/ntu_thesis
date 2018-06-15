@@ -31,7 +31,7 @@ mutable struct Agent
   experience::Array{Experience, 1}
 end
 mutable struct Network
-  # a Network consists of a collection of Agents, their undirected connections, a reference to the language, an edge-list representation of the graph, and a label for recording purposes
+  # a Network consists of a collection of Agents, their undirected connections, a reference to the language, an adjacency list representation of the graph, and a label for recording purposes
   agents::Array{Agent, 1}
   connections::Array{Tuple{Int64, Int64}, 1} #(agent_index, agent_index) edges
   language::Language
