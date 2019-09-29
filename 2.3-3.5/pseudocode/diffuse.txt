@@ -1,23 +1,23 @@
 Communicate Round ( network )
   randomize network's connections
   FOR EACH connection
-    diffuse the two agents, once each as the speaker
+    Diffuse the two agents, once each as the speaker
   END
 END
 
 Diffuse (speaker, hearer)
   pick a random meaning
   pick a random signal from speaker's actives for the meaning
-  IF hearer can understand OR speaker can repair
-    add speaker id and signal to hearers history
+  IF hearer Can Understand OR speaker Can Repair
+    add speaker id and signal to hearer history
     add signal to passive if not already present
     IF signal already in passive AND chance <= 0.25
-      add signal to heares active
+      add signal to heare active
     END
   ELSE
     create new zero level signal
-    add signal to each agents active and passive
-    add each agents id and signal to each other's history
+    add signal to each agent's active and passive
+    add each agent's id and signal to each other's history
   END
 END
 
