@@ -1,7 +1,7 @@
 Communicate Round ( network )
   randomize network's connections
   FOR EACH connection
-    Diffuse the two agents, once each as the speaker
+    Diffuse the two agents, once each as the speaker with the other as hearer
   END
 END
 
@@ -21,10 +21,11 @@ Diffuse (speaker, hearer)
   END
 END
 
-Can Understand Signal (signal, hearer)
+Can Understand Signal (speaker signal, hearer)
   FOR EACH passive signal hearer has for meaning
-    IF meanings and origins match && renalysis levels are within 1
-      RETURN true
+    IF meanings and origins match 
+      IF renalysis levels are within 1 OR renalysis level of speaker signal is zero 
+        RETURN true
     END
   END
   RETURN false
